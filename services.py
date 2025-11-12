@@ -16,7 +16,7 @@ def generate_ollama_response(prompt):
     """
     try:
         # The command to run the Ollama model
-        command = ["ollama", "run", "llama3:8b-instruct-q2_K", prompt]
+        command = ["ollama", "run", "llama3", prompt]
         result = subprocess.run(
             command, capture_output=True, text=True, check=True, encoding='utf-8'
         )
